@@ -2,65 +2,64 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    margin-left: 120px; /* Отступ для меню */
     min-height: 100vh;
-    position: relative;
+    background: #1a1a1a;
+    color: #ffffff;
+    margin-left: 200px; /* Отступ для меню */
 }
 
 nav {
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 120px;
+    width: 200px;
     height: 100vh;
-    background: #2c3e50;
-    padding: 20px 0;
+    background: #2d2d2d;
+    padding: 20px;
+    border-right: 2px solid #7289da;
 }
 
 .menu {
     list-style: none;
     position: absolute;
-    bottom: 20px;
+    bottom: 50px;
     left: 0;
     width: 100%;
 }
 
-.menu li {
+.menu-item {
     margin: 15px 0;
-}
-
-.menu a {
-    color: #ecf0f1;
-    text-decoration: none;
-    padding: 8px 15px;
-    display: block;
+    padding: 12px;
     transition: 0.3s;
-    border-left: 3px solid transparent;
 }
 
-.menu a:hover {
-    background: #34495e;
-    border-left: 3px solid #3498db;
+.menu-item a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.menu-item:hover {
+    background: #383838;
+    border-left: 4px solid #7289da;
 }
 
 .content {
-    padding: 20px;
+    padding: 40px;
     max-width: 800px;
-}
-
-h1 {
-    color: #2c3e50;
-    margin-bottom: 20px;
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
     body {
         margin-left: 0;
-        padding-bottom: 200px;
+        padding-bottom: 300px;
     }
     
     nav {
@@ -68,7 +67,8 @@ h1 {
         height: auto;
         top: auto;
         bottom: 0;
-        padding: 10px 0;
+        border-right: none;
+        border-top: 2px solid #7289da;
     }
     
     .menu {
@@ -78,7 +78,8 @@ h1 {
         position: static;
     }
     
-    .menu li {
-        margin: 5px;
+    .menu-item {
+        margin: 10px;
+        padding: 8px;
     }
 }
